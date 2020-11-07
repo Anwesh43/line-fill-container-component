@@ -1,23 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import LineFillRect from './LineFillRect'
+import { useAniamtedScale, useDimension } from './hooks';
 
 function App() {
+  const {w, h} = useDimension()
+  const {scale, start} = useAniamtedScale(0.02, 20)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick = {start}></button>
+      <LineFillRect scale = {scale} w = {w} h = {h}/>
     </div>
   );
 }
