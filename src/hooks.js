@@ -7,7 +7,7 @@ import {
     sinify
 } from './utils'
 
-const parts = 3
+const parts = 4
 export const useAniamtedScale = (scGap = 0.02, delay = 20) => {
     const [scale, setScale] = useState(0)
     const [animated, setAnimated] = useState(false)
@@ -25,7 +25,7 @@ export const useAniamtedScale = (scGap = 0.02, delay = 20) => {
                         clearInterval(interval)
                         setScale(0)
                     }
-                })
+                }, delay)
             }
         }
     }
@@ -58,6 +58,7 @@ export const useStyle = (w, h, scale) => {
     const background = 'green'
     const strokeWidth = Math.min(w, h) / 90 
     const gap = size / 2 
+    console.log(scale)
     return {
         parentStyle() {
             const left = `${w / 2}px`
@@ -84,7 +85,7 @@ export const useStyle = (w, h, scale) => {
             }
         },
         fillStyle() {
-            const sf2 = divideScale(sf, 1, parts)
+            const sf2 = divideScale(sf, 2, parts)
             const left = `${-gap / 2}px`
             const top = `${-size * sf2}px`
             const width = `${gap}px`

@@ -1,7 +1,7 @@
 import React from 'react'
 import {useStyle} from './hooks'
 
-const LineFillRect = (scale, w, h) => {
+const LineFillRect = ({scale, w, h}) => {
     const {
         parentStyle,
         lineStyle, 
@@ -11,7 +11,7 @@ const LineFillRect = (scale, w, h) => {
         <div style = {parentStyle()}>
             <div style = {fillStyle()}>
             </div>
-            {[0, 1].map(i => (<div style = {lineStyle(i)}></div>))}
+            {[0, 1].map(i => (<div key = {`line_${i}`} style = {lineStyle(i)}></div>))}
         </div>
     )
 }

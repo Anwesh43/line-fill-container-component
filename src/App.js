@@ -8,7 +8,7 @@ function App() {
   const {scale, start} = useAniamtedScale(0.02, 20)
   return (
     <div className="App">
-      <button onClick = {start}></button>
+      <button onClick = {start}>start</button>
       <LineFillRect scale = {scale} w = {w} h = {h}/>
     </div>
   );
