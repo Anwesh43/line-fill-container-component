@@ -68,7 +68,7 @@ export const useStyle = (w, h, scale) => {
                 top
             }
         },
-        getLineStyle(i) {
+        lineStyle(i) {
             const sf1 = divideScale(sf, 0, parts)
             const left = `${-gap / 2 + gap * i - strokeWidth / 2}px`
             const top = `${-size * sf1}px`
@@ -83,7 +83,7 @@ export const useStyle = (w, h, scale) => {
                 background
             }
         },
-        getFillStyle() {
+        fillStyle() {
             const sf2 = divideScale(sf, 1, parts)
             const left = `${-gap / 2}px`
             const top = `${-size * sf2}px`
