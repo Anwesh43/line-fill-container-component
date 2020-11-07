@@ -51,14 +51,13 @@ export const useDimension = () => {
     }
 }
 
-export const useStyle = (w, h, scale) => {
+export const useStyle = (w, h, scale, color) => {
     const sf = sinify(scale)
     const size = Math.min(w, h) / 10 
     const position = 'absolute'
-    const background = 'green'
+    const background = color || '#3F51B5'
     const strokeWidth = Math.min(w, h) / 90 
     const gap = size / 2 
-    console.log(scale)
     return {
         parentStyle() {
             const left = `${w / 2}px`

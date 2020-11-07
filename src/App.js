@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <button onClick = {start}>start</button>
-      <LineFillRect scale = {scale} w = {w} h = {h}/>
+      <LineFillRect color = "#009688" scale = {scale} w = {w} h = {h}/>
     </div>
   );
 }

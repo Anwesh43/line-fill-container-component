@@ -1,12 +1,12 @@
 import React from 'react'
 import {useStyle} from './hooks'
 
-const LineFillRect = ({scale, w, h}) => {
+const LineFillRect = ({scale, w, h, color}) => {
     const {
         parentStyle,
         lineStyle, 
         fillStyle
-    } = useStyle(w, h, scale)
+    } = useStyle(w, h, scale, color)
     return (
         <div style = {parentStyle()}>
             <div style = {fillStyle()}>
